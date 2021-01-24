@@ -20,8 +20,8 @@ speed_count, snake_speed = 0, 10
 
 pygame.init()
 mixer.init()
-eat_sound = mixer.Sound('eat.wav')
-bg = mixer.music.load('bg.ogg')
+eat_sound = mixer.Sound('media/eat.wav')
+bg = mixer.music.load('media/bg.ogg')
 mixer.music.set_volume(0.4)
 mixer.music.play(1)
 
@@ -29,7 +29,7 @@ surface = pygame.display.set_mode([RES_W, RES_H])
 clock = pygame.time.Clock()
 font_score = pygame.font.SysFont('Arial', 26, bold=True)
 font_end = pygame.font.SysFont('Arial', 66, bold=True)
-img = pygame.image.load('bg.png').convert()
+img = pygame.image.load('media/bg.png').convert()
 
 def close_game():
     for event in pygame.event.get():

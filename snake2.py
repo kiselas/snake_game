@@ -7,12 +7,12 @@ from PIL import ImageTk, Image
 
 game_width = 700
 game_height = 600
-snake_item = 20
-start_x = 24
-start_y = 24
+snake_item = 50
+start_x = 7
+start_y = 6
 snake_x_nav = 0
 snake_y_nav = 0
-snake_size = 5
+snake_size = 3
 difficulty = {'Easy': 0.50, 'Medium': 0.15, 'Hard': 0.05}
 
 tk = Tk()
@@ -20,7 +20,7 @@ tk.title('Snake on Python')
 canvas = Canvas(tk, width=game_width, height=game_height,
                 bd=0)
 # set bg
-image = ImageTk.PhotoImage(Image.open(r'C:\Users\User\Desktop\portfolio\snake\bg.png'))
+image = ImageTk.PhotoImage(Image.open('media/bg.png'))
 canvas.create_image(0, 0, anchor=NW, image=image)
 canvas.pack()
 tk.update()
@@ -47,8 +47,8 @@ class SnakeApple:
 
     def __init__(self):
         self.apple_color = pick_color_apple(colors)
-        self.coord_x = random.randrange(1, 35)
-        self.coord_y = random.randrange(1, 30)
+        self.coord_x = random.randrange(1, 14)
+        self.coord_y = random.randrange(1, 12)
         self.apple = canvas.create_oval(self.coord_x * snake_item, self.coord_y * snake_item,
                                         self.coord_x * snake_item + snake_item, self.coord_y * snake_item + snake_item,
                                         fill=self.apple_color)
