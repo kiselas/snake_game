@@ -1,3 +1,6 @@
+#This version is made with Tkinter
+
+
 import random
 import time
 from collections import deque
